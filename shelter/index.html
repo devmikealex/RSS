@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shelter 1 Fixed</title>
+    <title>Main Shelter 1 Fixed</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,16 +13,18 @@
         <div class="startScreen">
 
             <div class="header">
-                <div class="logo">
-                    <div class="logo__title">Cozy House</div>
-                    <div class="logo__text">Shelter for pets in Boston</div>
-                </div>
+                <a href="#">
+                    <div class="logo">
+                        <div class="logo__title">Cozy House</div>
+                        <div class="logo__text">Shelter for pets in Boston</div>
+                    </div>
+                </a>
                 <div class="navigation">
                     <ul class="navigation__list">
                         <li class="navigation__item navigation__item--active">About the shelter</li>
-                        <li class="navigation__item">Our pets</li>
-                        <li class="navigation__item">Help the shelter</li>
-                        <li class="navigation__item">Contacts</li>
+                        <li class="navigation__item"><a href="./pets.html">Our pets</a></li>
+                        <li class="navigation__item"><a href="#help">Help the shelter</a></li>
+                        <li class="navigation__item"><a href="#contacts">Contacts</a></li>
                     </ul>
                 </div>
             </div>
@@ -32,7 +34,7 @@
                     <h2>Not only people<br />need a house</h2>
                     <p>We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or
                         she will love you more than anybody else in the world, you will see!</p>
-                    <button class="button">Make a friend</button>
+                    <a class="button" href="#makefriend">Make a friend</a>
                 </div>
                 <img src="./assets/start-screen-puppy.png" alt="Big Dog">
             </div>
@@ -62,6 +64,7 @@
         </div>
 
         <div class="petsScreen">
+            <a name="makefriend"></a>
             <div class="petsScreen__content">
                 <h3 class="petsScreen__title">Our friends who<br />
                     are looking for a house</h3>
@@ -73,17 +76,17 @@
                     <div class="petsScreen__cards">
 
                         <div class="card">
-                            <img src="./assets/pets-katrine.png" alt="pet">
+                            <img src="./assets/pets/pets-katrine.png" alt="pet">
                             <h4>Katrine</h4>
                             <button class="button button--outline">Learn more</button>
                         </div>
                         <div class="card">
-                            <img src="./assets/pets-jennifer.png" alt="pet">
+                            <img src="./assets/pets/pets-jennifer.png" alt="pet">
                             <h4>Jennifer</h4>
                             <button class="button button--outline">Learn more</button>
                         </div>
                         <div class="card">
-                            <img src="./assets/pets-woody.png" alt="pet">
+                            <img src="./assets/pets/pets-woody.png" alt="pet">
                             <h4>Woody</h4>
                             <button class="button button--outline">Learn more</button>
                         </div>
@@ -94,11 +97,12 @@
                     </div>
 
                 </div>
-                <button class="button">Get to know the rest</button>
+                <a class="button" href="./pets.html">Get to know the rest</a>
             </div>
         </div>
 
         <div class="helpScreen">
+            <a name="help"></a>
             <h3 class="helpScreen__title">How you can help<br /> our shelter</h3>
             <div class="helpScreen__cards">
                 <div class="smallCard">
@@ -146,9 +150,9 @@
                 <div class="donationScreen__text">
                     <h3 class="donationScreen__title">You can also<br />make a donation</h3>
                     <p>Name of the bank / Type of bank account</p>
-                    <button class="button button--small">
+                    <a href="#" class="button button--small">
                         <img class="button__icon" src="./assets/credit-card.svg" alt="credit card">
-                        8380 2880 8028 8791 7435</button>
+                        8380 2880 8028 8791 7435</a>
                     <p class="addInfo">Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Maecenas a ipsum
                         at libero sagittis dignissim sed ac diam. Praesent ultrices maximus tortor et vulputate.
@@ -158,17 +162,18 @@
         </div>
 
         <div class="footer">
+            <a name="contacts"></a>
             <div class="footer__column">
                 <h3 class="footer__title">
                     For questions<br />and suggestions
                 </h3>
                 <div class="footer__text">
                     <img class="footer__icon" src="./assets/mail.svg" alt="email">
-                    email@shelter.com
+                    <a href="mailto:email@shelter.com">email@shelter.com</a>
                 </div>
                 <div class="footer__text">
                     <img class="footer__icon" src="./assets/phone.svg" alt="email">
-                    +13 674 567 75 54
+                    <a href="tel:+136745677554">+13 674 567 75 54</a>
                 </div>
             </div>
             <div class="footer__column">
@@ -177,14 +182,15 @@
                 </h3>
                 <div class="footer__text">
                     <img class="footer__icon" src="./assets/pin.svg" alt="email">
-                    1 Central Street, Boston<br />(entrance from the store)
+                    <a href="https://goo.gl/maps/95ohHWCpJMTphXge6" target="_blank">1 Central Street,
+                        Boston<br />(entrance from the store)</a>
                 </div>
                 <div class="footer__text">
                     <img class="footer__icon" src="./assets/pin.svg" alt="email">
-                    18 South Park, London
+                    <a href="https://goo.gl/maps/D43TNp5S1LWpiRDJ7" target="_blank">18 South Park, London</a>
                 </div>
             </div>
-            <img class="footer_dog" src="./assets/footer-puppy.png" alt="Dog">
+            <img class="footer__dog" src="./assets/footer-puppy.png" alt="Dog">
         </div>
     </div>
 </body>

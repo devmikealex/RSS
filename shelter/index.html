@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Shelter 1 Fixed</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
-    <div class="container">
-        <div class="startScreen">
+    <div class="startScreen-bg">
+        <div class="startScreen container">
 
             <div class="header">
                 <a href="#">
@@ -31,7 +35,7 @@
 
             <div class="startScreen__content">
                 <div class="startScreen__text">
-                    <h2>Not only people<br />need a house</h2>
+                    <h1>Not only people<br>need a house</h1>
                     <p>We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or
                         she will love you more than anybody else in the world, you will see!</p>
                     <a class="button" href="#makefriend">Make a friend</a>
@@ -39,71 +43,72 @@
                 <img src="./assets/start-screen-puppy.png" alt="Big Dog">
             </div>
         </div>
-
-        <div class="aboutScreen">
-            <div class="aboutScreen__content">
-                <img src="./assets/about-pets.png" alt="Dogs">
-                <div class="aboutScreen__text">
-                    <h3 class="aboutScreen__title">About the shelter “Cozy House”</h3>
-                    <p>Currently we have 121 dogs and 342 cats on our hands and statistics show that only 20% of them
-                        will
-                        find a family. The others will continue to live with us and will be waiting for a lucky chance
-                        to
-                        become
-                        dearly loved.</p>
-                    <p>We feed our wards with the best food and make sure that they do not get sick, feel comfortable
-                        (including psychologically) and well. We are supported by 87 volunteers and 28 employees of
-                        various
-                        skill
-                        levels. About 12% of the animals are taken by the shelter staff. Taking care of the animals,
-                        they
-                        become
-                        attached to the pets and would hardly ever leave them alone.</p>
-                </div>
+    </div>
+    <div class="aboutScreen">
+        <div class="aboutScreen__content">
+            <img src="./assets/about-pets.png" alt="Dogs">
+            <div class="aboutScreen__text">
+                <h3 class="aboutScreen__title">About the shelter “Cozy House”</h3>
+                <p>Currently we have 121 dogs and 342 cats on our hands and statistics show that only 20% of them
+                    will
+                    find a family. The others will continue to live with us and will be waiting for a lucky chance
+                    to
+                    become
+                    dearly loved.</p>
+                <p>We feed our wards with the best food and make sure that they do not get sick, feel comfortable
+                    (including psychologically) and well. We are supported by 87 volunteers and 28 employees of
+                    various
+                    skill
+                    levels. About 12% of the animals are taken by the shelter staff. Taking care of the animals,
+                    they
+                    become
+                    attached to the pets and would hardly ever leave them alone.</p>
             </div>
         </div>
+    </div>
 
-        <div class="petsScreen">
-            <a name="makefriend"></a>
-            <div class="petsScreen__content">
-                <h3 class="petsScreen__title">Our friends who<br />
-                    are looking for a house</h3>
+    <div class="petsScreen">
+        <a id="makefriend"></a>
+        <div class="petsScreen__content">
+            <h3 class="petsScreen__title">Our friends who<br>
+                are looking for a house</h3>
 
-                <div class="petsScreen__slider">
-                    <div class="petsScreen__arrow">
-                        <img src="./assets/Arrow.svg" alt="left arrow">
+            <div class="petsScreen__slider">
+                <div class="btnRound">
+                    <img src="./assets/Arrow.svg" alt="left arrow">
+                </div>
+                <div class="petsScreen__cards">
+
+                    <div class="card">
+                        <img src="./assets/pets/pets-katrine.png" alt="pet">
+                        <h4>Katrine</h4>
+                        <button class="button button--outline">Learn more</button>
                     </div>
-                    <div class="petsScreen__cards">
-
-                        <div class="card">
-                            <img src="./assets/pets/pets-katrine.png" alt="pet">
-                            <h4>Katrine</h4>
-                            <button class="button button--outline">Learn more</button>
-                        </div>
-                        <div class="card">
-                            <img src="./assets/pets/pets-jennifer.png" alt="pet">
-                            <h4>Jennifer</h4>
-                            <button class="button button--outline">Learn more</button>
-                        </div>
-                        <div class="card">
-                            <img src="./assets/pets/pets-woody.png" alt="pet">
-                            <h4>Woody</h4>
-                            <button class="button button--outline">Learn more</button>
-                        </div>
-
+                    <div class="card">
+                        <img src="./assets/pets/pets-jennifer.png" alt="pet">
+                        <h4>Jennifer</h4>
+                        <button class="button button--outline">Learn more</button>
                     </div>
-                    <div class="petsScreen__arrow">
-                        <img class="arrow--rotate" src="./assets/Arrow.svg" alt="right arrow">
+                    <div class="card">
+                        <img src="./assets/pets/pets-woody.png" alt="pet">
+                        <h4>Woody</h4>
+                        <button class="button button--outline">Learn more</button>
                     </div>
 
                 </div>
-                <a class="button" href="./pets.html">Get to know the rest</a>
-            </div>
-        </div>
+                <div class="btnRound">
+                    <img class="arrow--rotate" src="./assets/Arrow.svg" alt="right arrow">
+                </div>
 
-        <div class="helpScreen">
-            <a name="help"></a>
-            <h3 class="helpScreen__title">How you can help<br /> our shelter</h3>
+            </div>
+            <a class="button" href="./pets.html">Get to know the rest</a>
+        </div>
+    </div>
+
+    <div class="helpScreen-bg">
+        <div class="helpScreen container">
+            <a id="help"></a>
+            <h3 class="helpScreen__title">How you can help<br> our shelter</h3>
             <div class="helpScreen__cards">
                 <div class="smallCard">
                     <img src="./assets/food.svg" alt="">
@@ -143,29 +148,35 @@
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="donationScreen">
+    <div class="donationScreen-bg">
+        <div class="donationScreen container">
             <div class="donationScreen__content">
                 <img src="./assets/donation-dog.png" alt="Dogs">
                 <div class="donationScreen__text">
-                    <h3 class="donationScreen__title">You can also<br />make a donation</h3>
+                    <h3 class="donationScreen__title">You can also<br>make a donation</h3>
                     <p>Name of the bank / Type of bank account</p>
                     <a href="#" class="button button--small">
                         <img class="button__icon" src="./assets/credit-card.svg" alt="credit card">
                         8380 2880 8028 8791 7435</a>
-                    <p class="addInfo">Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    <p class="addInfo">Legal information and lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit.
                         Maecenas a ipsum
                         at libero sagittis dignissim sed ac diam. Praesent ultrices maximus tortor et vulputate.
                         Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="footer">
-            <a name="contacts"></a>
+
+    <div class="footer-bg">
+        <div class="footer container">
+            <a id="contacts"></a>
             <div class="footer__column">
                 <h3 class="footer__title">
-                    For questions<br />and suggestions
+                    For questions<br>and suggestions
                 </h3>
                 <div class="footer__text">
                     <img class="footer__icon" src="./assets/mail.svg" alt="email">
@@ -178,12 +189,12 @@
             </div>
             <div class="footer__column">
                 <h3 class="footer__title">
-                    We are waiting<br />for your visit
+                    We are waiting<br>for your visit
                 </h3>
                 <div class="footer__text">
                     <img class="footer__icon" src="./assets/pin.svg" alt="email">
                     <a href="https://goo.gl/maps/95ohHWCpJMTphXge6" target="_blank">1 Central Street,
-                        Boston<br />(entrance from the store)</a>
+                        Boston<br>(entrance from the store)</a>
                 </div>
                 <div class="footer__text">
                     <img class="footer__icon" src="./assets/pin.svg" alt="email">
@@ -193,6 +204,7 @@
             <img class="footer__dog" src="./assets/footer-puppy.png" alt="Dog">
         </div>
     </div>
+    <script src="./index.js"></script>
 </body>
 
 </html>

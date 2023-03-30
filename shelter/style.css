@@ -16,9 +16,10 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    background: rgb(60, 60, 60);
+    background: rgb(71, 89, 154);
 }
 
+h1,
 h2 {
     font-family: 'Georgia';
     font-style: normal;
@@ -27,7 +28,8 @@ h2 {
     line-height: 130%;
     color: #ffffff;
 }
-h3 {
+h3,
+.petsScreenMain__title {
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;
@@ -52,9 +54,7 @@ a {
     text-decoration: none;
     color: inherit;
 }
-/* a {
-    text-decoration: none;
-} */
+
 .button {
     display: inline-flex;
     flex-direction: column;
@@ -67,6 +67,7 @@ a {
     letter-spacing: 0.06em;
     font-size: 17px;
     cursor: pointer;
+    transition: all 0.3s;
 }
 .button:hover {
     background: var(--color-primary-light);
@@ -96,6 +97,9 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.header-bg {
+    background-color: white;
 }
 .header__light {
     height: 120px;
@@ -137,13 +141,14 @@ a {
     font-family: 'Arial';
     font-size: 15px;
     line-height: 160%;
+    transition: all 0.3s;
+    border-bottom: 3px solid #f1cdb300;
 }
-/* .navigation__item a {
-    color: inherit;
-    text-decoration: none;
-} */
+.navigation__item:hover {
+    border-bottom: 3px solid #f1cdb388;
+}
 .navigation__item--active {
-    border-bottom: 3px solid #f1cdb3;
+    border-bottom: 3px solid #f1cdb3 !important;
     color: #fafafa;
 }
 .header__light .navigation__item {
@@ -155,13 +160,16 @@ a {
 
 .startScreen {
     height: 908px;
-    background: url(./assets/start-screen-full.jpg);
-    border: 1px solid #000000;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding: 30px 40px 0 40px;
     overflow: hidden;
 }
-
+.startScreen-bg {
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background: url(./assets/noise_lines_transparent@2X.png),
+        radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
+    background-repeat: repeat;
+}
 .startScreen__content {
     margin-top: 90px;
     display: flex;
@@ -188,7 +196,7 @@ a {
     align-items: flex-start;
 }
 .aboutScreen__content {
-    margin-top: 82px;
+    margin-top: 80px;
     display: flex;
     align-items: center;
 }
@@ -213,7 +221,7 @@ a {
     align-items: flex-start;
 }
 .petsScreen__content {
-    margin-top: 82px;
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -222,23 +230,15 @@ a {
 .petsScreen__title {
     color: #545454;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 62px;
 }
-/* .petsScreen__cards h4 {
-    font-family: 'Georgia';
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    letter-spacing: 0.06em;
-    color: #545454;
-    margin: 36px 0 30px;
-} */
+
 .petsScreen__cards {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 58px;
-    margin-right: 58px;
+    margin-left: 56px;
+    margin-right: 56px;
     gap: 90px;
 }
 .petsScreen__arrow {
@@ -257,7 +257,7 @@ a {
 .petsScreen__slider {
     display: flex;
     align-items: center;
-    margin-bottom: 62px;
+    margin-bottom: 60px;
 }
 .card {
     display: flex;
@@ -285,19 +285,22 @@ a {
     color: #545454;
     margin: 28px 0 30px;
 }
+
 .helpScreen {
     height: 611px;
-    background: white;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
+.helpScreen-bg {
+    background: white;
+}
 .helpScreen__title {
     color: #545454;
     width: 400px;
     text-align: center;
-    margin-top: 82px;
+    margin-top: 80px;
     margin-bottom: 31px;
 }
 .helpScreen__cards {
@@ -326,10 +329,13 @@ a {
 
 .donationScreen {
     height: 462px;
-    background: #f6f6f6;
     display: flex;
     justify-content: center;
     align-items: flex-start;
+}
+.donationScreen-bg {
+    width: 100%;
+    background: var(--color-light-l);
 }
 .donationScreen__content {
     margin-top: 82px;
@@ -337,7 +343,7 @@ a {
     align-items: center;
 }
 .donationScreen__content > img {
-    margin-top: -12px;
+    margin-top: -16px;
 }
 .donationScreen__text {
     width: 380px;
@@ -369,13 +375,16 @@ a {
 
 .footer {
     height: 350px;
-    background: white;
     display: flex;
-    padding: 60px 40px;
+    padding: 57px 40px;
     justify-content: start;
     align-items: flex-start;
     position: relative;
-    background: url(./assets/footer.png);
+}
+.footer-bg {
+    background: url(./assets/noise_lines_transparent@2X.png),
+        radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%), #211f20;
+    background-repeat: repeat;
 }
 .footer__title {
     color: #ffffff;
@@ -389,7 +398,10 @@ a {
     font-size: 20px;
     line-height: 115%;
     letter-spacing: 0.06em;
-    color: #f1cdb3;
+    color: var(--color-primary);
+}
+.footer__text:hover {
+    color: var(--color-primary-light);
 }
 .footer__column {
     display: flex;
@@ -426,9 +438,6 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* margin-left: 58px; */
-    /* margin-right: 58px; */
-    /* gap: 40px; */
     margin-bottom: 34px;
 }
 .petsScreenMain__cards .card {
@@ -447,24 +456,30 @@ a {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    /* padding: 23px 19px; */
     border: 2px solid var(--color-primary);
     border-radius: 100px;
     width: 52px;
     height: 52px;
     color: var(--color-dark-3xl);
+    transition: all 0.3s;
+}
+.btnRound:hover {
+    background: var(--color-primary-light);
+    border: 2px solid var(--color-primary-light);
 }
 .btnRound svg {
     fill: var(--color-dark-3xl);
 }
 .btnRound--disabled {
-    border: 2px solid var(--color-dark-s);
-    cursor: default;
+    border: 2px solid var(--color-dark-s) !important;
+    cursor: default !important;
+    background: none !important;
 }
 .btnRound--disabled svg {
     fill: var(--color-dark-s);
 }
 .btnRound--current {
-    background-color: var(--color-primary);
-    cursor: default;
+    background-color: var(--color-primary) !important;
+    cursor: default !important;
+    border: 2px solid var(--color-primary) !important;
 }

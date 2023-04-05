@@ -1,0 +1,40 @@
+.help {
+    background-color: $color-light-xl;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 80px 40px;
+
+        h3 {
+            color: $color-dark-l;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+    }
+}
+
+.help-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    flex-wrap: wrap;
+    height: 280px;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 60px;
+        height: 110px;
+
+        h4 {
+            color: $color-dark-l;
+        }
+    }
+
+}

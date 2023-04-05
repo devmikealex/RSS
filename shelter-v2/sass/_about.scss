@@ -1,0 +1,30 @@
+.about {
+    background-color: $color-light-xl;
+
+    h3 {
+        color: $color-dark-l;
+        margin-bottom: 25px;
+    }
+
+    p {
+        color: $color-dark-xl;
+        width: 430px;
+        margin-bottom: 25px;
+
+        // margin-bottom: 250px;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+
+    &__contetn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 80px 40px;
+
+        img {
+            margin-right: 120px;
+        }
+    }
+}

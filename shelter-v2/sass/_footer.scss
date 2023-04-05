@@ -1,0 +1,37 @@
+.footer {
+    background: url(./assets/noise_lines_transparent@2X.png),
+        radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%), #211f20;
+    background-repeat: repeat;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 40px 0;
+
+        h3 {
+            color: $color-light-xl;
+        }
+
+        a {
+            font-size: 20px;
+            line-height: 115%;
+            letter-spacing: 0.06em;
+            color: $color-primary;
+        }
+    }
+
+    &__column {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        height: 248px;
+    }
+
+    &__line {
+        display: flex;
+        align-items: center;
+
+        img {
+            margin-right: 18px;
+        }
+    }
+}

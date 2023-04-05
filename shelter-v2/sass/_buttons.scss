@@ -1,0 +1,54 @@
+.button {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 45px;
+    background: $color-primary;
+    border-radius: 100px;
+    border: none;
+    letter-spacing: 0.06em;
+    font-size: 17px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.button:hover {
+    background: $color-primary-light;
+}
+
+.button--outline {
+    background: none;
+    border: 2px solid $color-primary;
+    padding: 14px 42px;
+}
+
+.button--small {
+    padding: 10px 16px;
+    border-radius: 9px;
+    flex-direction: row;
+    font-size: 20px;
+    color: $color-dark-l;
+}
+
+.button__icon {
+    margin-right: 15px;
+}
+
+.btnRound {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 2px solid $color-primary;
+    border-radius: 100px;
+    width: 52px;
+    height: 52px;
+    color: $color-dark-3xl;
+    transition: all 0.3s;
+}
+
+.btnRound:hover {
+    background: $color-primary-light;
+    border: 2px solid $color-primary-light;
+}

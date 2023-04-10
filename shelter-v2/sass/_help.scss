@@ -1,3 +1,5 @@
+$help-small-size: 460px;
+
 .help {
     background-color: $color-light-xl;
 
@@ -6,12 +8,21 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 80px 40px;
+        // padding: 80px 40px;
+        padding: 80px 4vw;
+
+        @include for-size(sm) {
+            padding: 42px 4vw;
+        }
 
         h3 {
             color: $color-dark-l;
             margin-bottom: 60px;
             text-align: center;
+
+            @media screen and (max-width: $help-small-size) {
+                font-size: 25px;
+            }
         }
     }
 }
@@ -22,19 +33,30 @@
     align-items: center;
     align-content: space-between;
     flex-wrap: wrap;
-    height: 280px;
+    // gap: 20px;
+    // column-gap: 20px;
+    row-gap: 30px;
 
     &__item {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        margin: 0 60px;
         height: 110px;
+        min-width: 200px;
+
+        @media screen and (max-width: $help-small-size) {
+            // min-width: 140px;
+            min-width: auto;
+            flex-basis: 49.5%;
+        }
 
         h4 {
             color: $color-dark-l;
+
+            @media screen and (max-width: $help-small-size) {
+                font-size: 15px;
+            }
         }
     }
-
 }

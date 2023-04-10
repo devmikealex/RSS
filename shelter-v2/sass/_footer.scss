@@ -1,15 +1,41 @@
+$footer-small-size: 680px;
+
 .footer {
-    background: url(./assets/noise_lines_transparent@2X.png),
+    background: url("../assets/noise_lines_transparent@2X.png"),
         radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%), #211f20;
     background-repeat: repeat;
 
     &__content {
         display: flex;
         justify-content: space-between;
-        padding: 40px 40px 0;
+        padding: 40px 4vw 0;
+
+        @media screen and (max-width: $footer-small-size) {
+            flex-direction: column;
+        }
+
+        .image {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        @include for-size(md) {
+            flex-wrap: wrap;
+            padding: 40px 5vw 0;
+
+            .image {
+                margin: 0 auto;
+                // margin-top: 42px;
+            }
+        }
 
         h3 {
             color: $color-light-xl;
+
+            @media screen and (max-width: $footer-small-size) {
+                font-size: 25px;
+                text-align: center;
+            }
         }
 
         a {
@@ -17,18 +43,37 @@
             line-height: 115%;
             letter-spacing: 0.06em;
             color: $color-primary;
+
+            @media screen and (max-width: $footer-small-size) {
+                font-size: 16px;
+            }
         }
     }
 
     &__column {
+        flex-shrink: 0;
         display: grid;
         grid-template-rows: repeat(3, 1fr);
         height: 248px;
+        padding-right: 20px;
+        margin-bottom: 40px;
+
+        @media screen and (max-width: $footer-small-size) {
+            height: 200px;
+        }
+
+        @include for-size(md) {
+            padding-right: 0;
+        }
     }
 
     &__line {
         display: flex;
         align-items: center;
+
+        @media screen and (max-width: $footer-small-size) {
+            justify-content: center;
+        }
 
         img {
             margin-right: 18px;

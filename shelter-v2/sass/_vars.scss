@@ -14,3 +14,24 @@ $color-light-xl: #FFFFFF;
 @mixin font-alt {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+// https://itnext.io/writing-media-queries-with-sass-mixins-3ea591ea3ea4
+@mixin for-size($size) {
+    @if $size==sm {
+        @media screen and (max-width: 321px) {
+            @content;
+        }
+    }
+
+    @else if $size==md {
+        @media screen and (max-width: 769px) {
+            @content;
+        }
+    }
+
+    @else if $size==lg {
+        @media screen and (max-width: 1025px) {
+            @content;
+        }
+    }
+}

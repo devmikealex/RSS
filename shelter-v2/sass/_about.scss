@@ -4,11 +4,16 @@
     h3 {
         color: $color-dark-l;
         margin-bottom: 25px;
+
+        @include for-size(sm) {
+            text-align: center;
+            font-size: 25px;
+        }
     }
 
     p {
         color: $color-dark-xl;
-        width: 430px;
+        max-width: 430px;
         margin-bottom: 25px;
 
         // margin-bottom: 250px;
@@ -17,14 +22,31 @@
         }
     }
 
-    &__contetn {
+    &__content {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 80px 40px;
+        // padding: 80px 40px;
+        padding: 80px 4vw;
 
-        img {
-            margin-right: 120px;
+        .image {
+            // margin-right: 80px;
+            margin-right: 5%;
+        }
+
+        @include for-size(sm) {
+            padding: 42px 4vw;
+        }
+
+        @include for-size(md) {
+            flex-direction: column;
+            align-items: center;
+
+            .image {
+                order: 2;
+                margin-top: 42px;
+                margin-right: 0;
+            }
         }
     }
 }

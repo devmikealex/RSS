@@ -31,6 +31,11 @@ h1 {
   font-size: 44px;
   line-height: 130%;
 }
+@media screen and (max-width: 321px) {
+  h1 {
+    font-size: 35px;
+  }
+}
 
 h3 {
   font-style: normal;
@@ -118,11 +123,6 @@ p {
 @media screen and (max-width: 769px) {
   .header__column h1 {
     text-align: center;
-  }
-}
-@media screen and (max-width: 321px) {
-  .header__column h1 {
-    font-size: 35px;
   }
 }
 .header__column p {
@@ -495,9 +495,9 @@ p {
 .donat__content a {
   margin: 20px 0;
 }
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 395px) {
   .donat__content a {
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 @media screen and (max-width: 321px) {

@@ -54,10 +54,6 @@ $menu-switch-size: 720px;
             @include for-size(md) {
                 text-align: center;
             }
-
-            @include for-size(sm) {
-                font-size: 35px;
-            }
         }
 
         p {

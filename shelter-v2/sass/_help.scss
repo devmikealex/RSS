@@ -19,10 +19,7 @@ $help-small-size: 460px;
             color: $color-dark-l;
             margin-bottom: 60px;
             text-align: center;
-
-            @media screen and (max-width: $help-small-size) {
-                font-size: 25px;
-            }
+            max-width: 310px;
         }
     }
 }

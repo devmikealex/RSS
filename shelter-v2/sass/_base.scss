@@ -32,12 +32,11 @@ a {
 h1 {
     font-style: normal;
     font-weight: 400;
-    font-size: 44px;
+    // font-size: 44px;
     line-height: 130%;
-
-    @include for-size(sm) {
-        font-size: 35px;
-    }
+    @include interpolate(font-size, 35px, 44px) // @include for-size(sm) {
+    //     font-size: 35px;
+    // }
 }
 
 h3 {
@@ -46,6 +45,10 @@ h3 {
     font-size: 35px;
     line-height: 130%;
     letter-spacing: 0.06em;
+
+    @include for-size(sm) {
+        font-size: 25px;
+    }
 }
 
 h4 {

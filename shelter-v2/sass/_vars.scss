@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 $color-primary: #f1cdb3;
 $color-primary-light: #fddcc4;
 
@@ -34,4 +36,39 @@ $color-light-xl: #FFFFFF;
             @content;
         }
     }
+}
+
+
+@mixin interpolate($properties, $min-value, $max-value, $min-screen: 321px, $max-screen: 768px) {
+    & {
+        @each $property in $properties {
+            #{$property}: $min-value;
+        }
+
+        @media screen and (min-width: $min-screen) {
+            @each $property in $properties {
+                #{$property}: calc-interpolation($min-screen, $min-value, $max-screen, $max-value);
+            }
+        }
+
+        @media screen and (min-width: $max-screen) {
+            @each $property in $properties {
+                #{$property}: $max-value;
+            }
+        }
+    }
+}
+
+@function calc-interpolation($min-screen, $min-value, $max-screen, $max-value) {
+    $a: math.div(($max-value - $min-value), ($max-screen - $min-screen));
+    $b: $min-value - $a * $min-screen;
+
+    $sign: "+";
+
+    @if ($b < 0) {
+        $sign: "-";
+        $b: abs($b);
+    }
+
+    @return calc(#{$a*100}vw #{$sign} #{$b});
 }

@@ -28,12 +28,19 @@ a {
 h1 {
   font-style: normal;
   font-weight: 400;
-  font-size: 44px;
   line-height: 130%;
 }
-@media screen and (max-width: 321px) {
+h1 {
+  font-size: 35px;
+}
+@media screen and (min-width: 321px) {
   h1 {
-    font-size: 35px;
+    font-size: calc(2.0134228188vw + 28.5369127517px);
+  }
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 44px;
   }
 }
 
@@ -43,6 +50,11 @@ h3 {
   font-size: 35px;
   line-height: 130%;
   letter-spacing: 0.06em;
+}
+@media screen and (max-width: 321px) {
+  h3 {
+    font-size: 25px;
+  }
 }
 
 h4 {
@@ -110,6 +122,7 @@ p {
   }
   .header__content img {
     max-width: 590px;
+    padding: 0 20px;
   }
 }
 .header__column {
@@ -119,10 +132,12 @@ p {
 .header__column h1 {
   color: #FFFFFF;
   margin-bottom: 42px;
+  max-width: 360px;
 }
 @media screen and (max-width: 769px) {
   .header__column h1 {
     text-align: center;
+    padding: 0 20px;
   }
 }
 .header__column p {
@@ -133,10 +148,11 @@ p {
 @media screen and (max-width: 769px) {
   .header__column p {
     text-align: center;
+    padding: 0 20px;
   }
 }
 .header__column a {
-  margin-bottom: 42px;
+  margin-bottom: 60px;
 }
 @media screen and (max-width: 769px) {
   .header__column {
@@ -265,7 +281,6 @@ p {
 @media screen and (max-width: 321px) {
   .about h3 {
     text-align: center;
-    font-size: 25px;
   }
 }
 .about p {
@@ -308,11 +323,6 @@ p {
 .friends h3 {
   text-align: center;
   max-width: 400px;
-}
-@media screen and (max-width: 321px) {
-  .friends h3 {
-    font-size: 25px;
-  }
 }
 .friends__content {
   display: flex;
@@ -399,11 +409,7 @@ p {
   color: #545454;
   margin-bottom: 60px;
   text-align: center;
-}
-@media screen and (max-width: 460px) {
-  .help__content h3 {
-    font-size: 25px;
-  }
+  max-width: 310px;
 }
 
 .help-list {
@@ -481,7 +487,6 @@ p {
 @media screen and (max-width: 321px) {
   .donat__content h3 {
     text-align: center;
-    font-size: 25px;
   }
 }
 .donat__content h5 {

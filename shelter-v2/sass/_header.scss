@@ -96,6 +96,30 @@ $menu-switch-size: 720px;
         display: none;
     }
 
+    &.big {
+        font-size: 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 40px;
+        position: fixed;
+        top: 0;
+        right: -322px;
+        width: 320px;
+        background-color: $color-dark-3xl;
+        padding: 100px 38px;
+        z-index: 100;
+        transition: right 0.2s ease-out;
+
+        &.fade-in {
+            right: 0;
+        }
+
+        .nav-links__item {
+            margin-left: 0;
+        }
+    }
+
     &__item {
 
         &--active {
@@ -112,9 +136,25 @@ $menu-switch-size: 720px;
 .nav-menu {
     cursor: pointer;
     display: none;
+    z-index: 102;
 
     @media screen and (max-width: $menu-switch-size) {
         display: block;
+    }
+
+    &.opened {
+        position: fixed;
+        top: 48px;
+        right: 30px;
+
+        @include for-size(sm) {
+            top: 32px;
+            right: 15px;
+        }
+
+        img {
+            transform: rotate(90deg);
+        }
     }
 }
 

@@ -177,6 +177,27 @@ p {
     display: none;
   }
 }
+.nav-links.big {
+  font-size: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 40px;
+  position: fixed;
+  top: 0;
+  right: -322px;
+  width: 320px;
+  background-color: #292929;
+  padding: 100px 38px;
+  z-index: 100;
+  transition: right 0.2s ease-out;
+}
+.nav-links.big.fade-in {
+  right: 0;
+}
+.nav-links.big .nav-links__item {
+  margin-left: 0;
+}
 .nav-links__item--active {
   border-bottom: 3px solid #f1cdb3 !important;
   color: #fafafa;
@@ -188,11 +209,26 @@ p {
 .nav-menu {
   cursor: pointer;
   display: none;
+  z-index: 102;
 }
 @media screen and (max-width: 720px) {
   .nav-menu {
     display: block;
   }
+}
+.nav-menu.opened {
+  position: fixed;
+  top: 48px;
+  right: 30px;
+}
+@media screen and (max-width: 321px) {
+  .nav-menu.opened {
+    top: 32px;
+    right: 15px;
+  }
+}
+.nav-menu.opened img {
+  transform: rotate(90deg);
 }
 
 .logo {
